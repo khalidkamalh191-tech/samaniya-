@@ -1,129 +1,127 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>الطريقة السمانية الطيبية القريبية</title>
+<meta charset="UTF-8">
+<title>الطريقة السمانية الطيبية القريبية</title>
 
-  <!-- خط عربي روحاني -->
-  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cairo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Amiri&display=swap" rel="stylesheet">
 
-  <style>
-    .logo img {
-  height: 50px;
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-    .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  background: #f8fafc;
-  border-bottom: 1px solid #e5e7eb;
+
+body {
   font-family: 'Cairo', sans-serif;
+  background-color: #f5f6f8;
+  color: #1f2937;
 }
 
-.navbar .logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: #111827;
+/* ====== NAVBAR ====== */
+.navbar {
+  background-color: #f1f3f5;
+  border-bottom: 1px solid #d1d5db;
+  padding: 12px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 55px;
+}
+
+/* القوائم */
+.navbar nav {
+  display: flex;
+  gap: 25px;
 }
 
 .navbar nav a {
-  margin-left: 20px;
   text-decoration: none;
-  color: #1f2937;
-  font-size: 16px;
+  color: #374151;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .navbar nav a:hover {
-  color: #2563eb;
+  color: #1d4ed8;
 }
-    body {
-      margin: 0;
-      font-family: 'Amiri', serif;
-      background: linear-gradient(to bottom, #f9fafb, #eef2f7);
-      color: #1f2933;
-      text-align: center;
-    }
 
-    header {
-      padding: 80px 20px 40px;
-    }
-
-    header h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
-      font-weight: normal;
-    }
-
-    header p {
-      font-family: 'Cairo', sans-serif;
-      font-size: 18px;
-      color: #4b5563;
-    }
-
-    .wisdom {
-      margin: 40px auto;
-      max-width: 700px;
-      font-size: 22px;
-      line-height: 2;
-      color: #374151;
-    }
-
-    .buttons {
-      margin-top: 50px;
-    }
-
-    .buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-family: 'Cairo', sans-serif;
-      font-size: 16px;
-      background-color: #e5e7eb;
-      color: #1f2933;
-      transition: all 0.3s ease;
-    }
-
-    .buttons a:hover {
-      background-color: #cbd5e1;
-    }
-
-    footer {
-      margin-top: 80px;
-      padding: 20px;
-      font-size: 14px;
-      color: #6b7280;
-    }
-    .hero {
+/* ====== HERO ====== */
+.hero {
+  height: 85vh;
   background-image: url("asset/home.jpeg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center bottom;
-  background-color: #0f172a; /* لون داكن خلف الصورة */
-  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+}
 
-.overlay {
-  background: rgba(0, 0, 0, 0.55);
+.hero-content {
+  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  color: #ffffff;
+  color: white;
+  padding: 20px;
 }
-  </style>
+
+.hero-content h1 {
+  font-family: 'Amiri', serif;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* ====== WISDOM ====== */
+.wisdom {
+  background: white;
+  margin: -40px auto 0;
+  padding: 30px;
+  max-width: 750px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  font-family: 'Amiri', serif;
+  font-size: 22px;
+  text-align: center;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  margin-top: 80px;
+  padding: 20px;
+  background: #f1f3f5;
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+</style>
 </head>
 
 <body>
-  <div class="navbar">
+
+<!-- ===== NAVBAR ===== -->
+<div class="navbar">
   <div class="logo">
-  <img src="asset/logo.jpeng" alt="الطريقة السمانية الطيبية القريبية">
-</div>
+    <img src="asset/logo.png" alt="الطريقة السمانية الطيبية القريبية">
+  </div>
+
   <nav>
     <a href="index.html">الرئيسية</a>
     <a href="about.html">عن الطريقة</a>
@@ -134,33 +132,38 @@
     <a href="media.html">الإعلام</a>
   </nav>
 </div>
+
+<!-- ===== HERO ===== -->
 <section class="hero">
-  <div class="overlay">
+  <div class="hero-content">
     <h1>الطريقة السمانية الطيبية القريبية</h1>
-    <p>سلوكٌ إلى الله بالمحبة والذكر والصحبة</p>
+    <p>سلوك إلى الله بالمحبة والذكر والصحبة</p>
   </div>
 </section>
+
+<!-- ===== WISDOM ===== -->
 <div class="wisdom" id="wisdom">
-  ﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾
+﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾
 </div>
+
 <footer>
-  © الطريقة السمانية الطيبية القريبية
+© الطريقة السمانية الطيبية القريبية
 </footer>
 
 <script>
-  const wisdoms = [
-    "﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾",
-    "﴿ وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ ﴾",
-    "من صدق مع الله بلّغه الله",
-    "ما كان لله اتصل، وما كان لغيره انفصل",
-    "الطريق أدب، ومن لا أدب له لا طريق له"
-  ];
+const wisdoms = [
+"﴿ أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ ﴾",
+"﴿ وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ ﴾",
+"من صدق مع الله بلّغه الله",
+"ما كان لله اتصل، وما كان لغيره انفصل",
+"الطريق أدب، ومن لا أدب له لا طريق له"
+];
 
-  let index = 0;
-  setInterval(() => {
-    index = (index + 1) % wisdoms.length;
-    document.getElementById("wisdom").innerText = wisdoms[index];
-  }, 5000);
+let i = 0;
+setInterval(() => {
+  i = (i + 1) % wisdoms.length;
+  document.getElementById("wisdom").innerText = wisdoms[i];
+}, 5000);
 </script>
 
 </body>
